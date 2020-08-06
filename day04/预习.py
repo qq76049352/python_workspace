@@ -20,7 +20,7 @@
 # lst.extend([5,'六'])
 # print(lst)
 
-lst = ["麻花藤","林俊杰","周润发","周芷若"]
+# lst = ["麻花藤","林俊杰","周润发","周芷若"]
 # deleted = lst.pop()
 # print((deleted))
 #
@@ -31,5 +31,15 @@ lst = ["麻花藤","林俊杰","周润发","周芷若"]
 # lst.remove("麻花藤")
 # print(lst)
 
-del  lst[1:3]
+# del  lst[1:3]
+# print(lst)
+
+lst = ["太白","太黑","无色","五色","日天"]
+# lst[1] = "太污"
+# print(lst)
+
+lst[1:4:2] = ["麻花藤","哇靠"]
 print(lst)
+
+# lst[1:4] = ["李嘉诚个龟儿子"]
+# print(lst)
