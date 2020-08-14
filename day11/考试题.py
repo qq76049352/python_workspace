@@ -25,19 +25,33 @@
 #     f.flush()
 #     f.close()
 
+# def func(user_list):
+#     new_list=[]
+#     name_list=[]
+#     for i in user_list:
+#         if i["name"] in name_list:
+#             for y in new_list:
+#                 if i["name"] == y['name']:
+#                     y['hobby_list'].append(i['hobby'])
+#         else:
+#             name_list.append(i["name"])
+#             dic = {"name":i["name"],"hobby_list":[i["hobby"],]}
+#             new_list.append(dic)
+#     print(new_list)
+
 def func(user_list):
     new_list=[]
-    name_list=[]
     for i in user_list:
-        if i["name"] in name_list:
-            for y in new_list:
-                if i["name"] == y['name']:
-                    y['hobby_list'].append(i['hobby'])
+        for j in new_list:
+            if i["name"] in j['name']:
+                j['hobby_list'].append(i['hobby'])
+                break
         else:
-            name_list.append(i["name"])
             dic = {"name":i["name"],"hobby_list":[i["hobby"],]}
             new_list.append(dic)
     print(new_list)
+
+
 
 user_list = [
     {"name":"alex","hobby":"抽烟"},
