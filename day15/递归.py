@@ -15,8 +15,9 @@
 #     func(right)
 
 import os
-filePath = r"C:\Users\张尔博\PycharmProjects\python_workspace"
-
+# filePath = r"C:\Users\张尔博\PycharmProjects\python_workspace"
+# filePath = "/Volumes/Transcend/python Test/python_workspace"
+filePath = '..'
 def read(filePath,n):
     it = os.listdir(filePath)
     # print("__iter__" in dir(it))
