@@ -18,3 +18,7 @@ g2 = (i for i in g1)
 print(list(g))
 print(list(g1))
 print(list(g2))
+
+#迭代器定义：内部含有__iter__并且含有__next__方法的
+#迭代器的好处：节省内存，惰性机制，一条刘走到底
+#生成器：自己用python代码写的迭代器
