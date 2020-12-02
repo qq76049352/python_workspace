@@ -60,10 +60,9 @@ class Person:
 
 
     def __init__(self,name,age,hobby):
-        # self.name = name
-        # self.age =age
-        # self.hobby=hobby
-        print(666)
+        self.name = name
+        self.age =age
+        self.hobby=hobby
 
     def work(self):  #方法，函数，动态变量
         print("人类都会工作...")
@@ -90,12 +89,28 @@ class Person:
 # Person.work(111)
 
 
-#对象的角度
+
 ret = Person('alex',1000,'oldwoen')  #类名+（）的过程：实例化的过程（创建一个对象的过程），
         # Person（）实例化对象，实例，对象
 print(ret.__dict__)
 #1,类名+（）产生一个实例（对象，对象空间）
 #2，自动执行类中的__init__方法，将对象空间传给__init__的self参数。
 #3 给对象封装相应的属性
+
+#对象的角度
+    #操作对象中的静态变量
+        #1，__dict__查询对象中的所有的内容
+        #2，万能的 点
+
+# ret.high = 175
+# del ret.name
+# ret.age = 73
+# print(ret.__dict__)
+
+    #对象操作类的静态变量：只能查
+# print(ret.mind)
+
+    #对象调用类的方法
+ret.shopping()
 
 
