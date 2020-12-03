@@ -61,7 +61,19 @@ print(p3.language)
   老李，90岁，男，开车去东北
   老李，90岁，男，最爱大保健
   老张…
+"""
+class Person2():
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+        print("%s,%s岁,上山去砍柴" %(self.name,self.age))
+        print("%s,%s岁,开车去东北" % (self.name, self.age))
+        print("%s,%s岁,最爱大保健" %(self.name,self.age))
 
+s1 = Person2("小明",10)
+s2 = Person2("老李",90)
+
+"""
 3,模拟英雄联盟写一个游戏人物的类（升级题）.
   要求:
   (1)创建一个 Game_role的类.
@@ -71,3 +83,17 @@ print(p3.language)
       实例化另个一个对象 剑豪 ad为20, hp为80
       盖伦通过attack方法攻击剑豪,此方法要完成 '谁攻击谁,谁掉了多少血,  还剩多少血'的提示功能.
 """
+
+class Game_role():
+    def __init__(self,ad,hp):
+        self.ad=ad
+        self.hp=hp
+
+def Attack(p1,p2):
+    p1.hp -= p2.ad
+    p2.hp -=p1.ad
+    print(p1.hp,p2.hp)
+
+l1 = Game_role(20,100)
+l2 = Game_role(20,80)
+Attack(l1,l2)
