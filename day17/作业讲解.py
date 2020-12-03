@@ -85,15 +85,14 @@ s2 = Person2("老李",90)
 """
 
 class Game_role():
-    def __init__(self,ad,hp):
+    def __init__(self,name,ad,hp):
+        self.name = name
         self.ad=ad
         self.hp=hp
+    def attack(self,p):
+        p.hp-=self.ad
+        print('%s攻击了%s，%s掉了%s血，还剩%s血'%(self.name,p.name,p.name,self.ad,p.hp))
 
-def Attack(p1,p2):
-    p1.hp -= p2.ad
-    p2.hp -=p1.ad
-    print(p1.hp,p2.hp)
-
-l1 = Game_role(20,100)
-l2 = Game_role(20,80)
-Attack(l1,l2)
+l1 = Game_role('盖伦',20,500)
+l2 = Game_role('亚索',50,200)
+l1.attack(l2)
