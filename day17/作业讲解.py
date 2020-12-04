@@ -92,6 +92,7 @@ class Game_role():
     def attack(self,p):
         p.hp-=self.ad
         print('%s攻击了%s，%s掉了%s血，还剩%s血'%(self.name,p.name,p.name,self.ad,p.hp))
+        print('{0}攻击了{1}，{2}掉了{3}血，还剩{4}血'.format(self.name, p.name, p.name, self.ad, p.hp))
 
 l1 = Game_role('盖伦',20,500)
 l2 = Game_role('亚索',50,200)
